@@ -1,6 +1,10 @@
+import Container from "./Container"
+
 const Header = () => {
   return (
-    <div>Header</div>
+    <Container>
+      Header
+    </Container>
   )
 }
 

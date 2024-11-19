@@ -1,6 +1,10 @@
+import Container from "./Container"
+
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <Container>
+      Footer
+    </Container>
   )
 }
 
