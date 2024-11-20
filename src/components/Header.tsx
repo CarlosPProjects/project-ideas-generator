@@ -9,7 +9,7 @@ const Header = () => {
         <Link href='/' className="font-semibold text-2xl">
           ChronoProject
         </Link>
-        <Button variant='outline' size='lg' className="">
+        <Button variant='outline' size='lg'>
           Get demo
         </Button>
       </Container>
