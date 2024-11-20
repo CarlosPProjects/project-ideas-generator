@@ -1,6 +1,0 @@
-<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="15" cy="15" r="5" fill="#00bfff" />
-  <circle cx="30" cy="15" r="5" fill="black" />
-  <circle cx="15" cy="30" r="5" fill="black" />
-  <circle cx="30" cy="30" r="5" fill="black" />
-</svg>
