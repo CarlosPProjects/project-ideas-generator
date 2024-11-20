@@ -2,7 +2,7 @@ import Container from "@/components/Container"
 
 const Home = () => {
   return (
-    <Container>
+    <Container className="flex-1 flex bg-accent mb-4 rounded-[32px] border border-border text-muted-foreground __container">
       Home
     </Container>
   )

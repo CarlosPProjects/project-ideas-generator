@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -71,5 +65,13 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .__container {
+    background: rgba(29, 31, 32, 0.904)
+      radial-gradient(rgba(125, 125, 125, 0.4) 10%, transparent 1%);
+    background-size: 11.4px 11.4px;
   }
 }

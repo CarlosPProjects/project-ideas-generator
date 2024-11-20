@@ -2,9 +2,11 @@ import Container from "./Container"
 
 const Footer = () => {
   return (
-    <Container>
-      Footer
-    </Container>
+    <footer>
+      <Container className="py-4">
+        Footer
+      </Container>
+    </footer>
   )
 }
 
