@@ -29,7 +29,7 @@ export default function RootLayout({
       >
         <div className="flex flex-col min-h-screen">
           <Header />
-          <main className="flex-1 flex">
+          <main className="flex-1 flex justify-center">
             {children}
           </main>
           {/* <Footer /> */}

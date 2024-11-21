@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Container from "./Container"
-import { Button } from "./ui/button"
+import { buttonVariants } from "./ui/button"
 
 const Header = () => {
   return (
@@ -9,9 +9,7 @@ const Header = () => {
         <Link href='/' className="font-semibold text-2xl">
           ChronoProject
         </Link>
-        <Button variant='outline' size='lg'>
-          Get demo
-        </Button>
+        <Link className={buttonVariants({ size: 'lg', variant: 'outline' })} href='/ideas'>Get demo</Link>
       </Container>
     </header>
   )
