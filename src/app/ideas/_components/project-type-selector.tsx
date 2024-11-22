@@ -26,7 +26,7 @@ const ProjectTypeSelector: FC<Props> = ({ form }) => {
       render={({ field }) => (
         <FormItem>
           <FormLabel className='pl-4'>Project type</FormLabel>
-          <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <Select {...field}>
             <FormControl>
               <SelectTrigger>
                 <SelectValue placeholder="Select a project type" />
