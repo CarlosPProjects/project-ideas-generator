@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 
 import '@/styles/globals.css';
 import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/theme-provider";
 // import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -27,13 +28,20 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased`}
       >
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-1 flex justify-center">
-            {children}
-          </main>
-          {/* <Footer /> */}
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1 flex justify-center">
+              {children}
+            </main>
+            {/* <Footer /> */}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

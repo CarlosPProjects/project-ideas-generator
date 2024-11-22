@@ -1,9 +1,10 @@
 'use client'
 
 import Link from "next/link"
-import Container from "./Container"
-import { buttonVariants } from "./ui/button"
 import { usePathname } from "next/navigation"
+
+import Container from "./Container"
+import { ModeToggle } from "./mode-toggle"
 
 const Header = () => {
 
@@ -17,7 +18,7 @@ const Header = () => {
         <Link href='/' className="font-semibold text-2xl">
           ChronoProject
         </Link>
-        <Link className={buttonVariants({ size: 'lg', variant: 'outline' })} href='/ideas'>Get demo</Link>
+        <ModeToggle />
       </Container>
     </header>
   )
