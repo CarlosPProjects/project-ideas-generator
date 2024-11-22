@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { FC } from 'react'
 import { UseFormReturn } from 'react-hook-form'
 
-import { FormField, FormItem, FormMessage } from '@/components/ui/form'
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
 import {
   Select,
   SelectContent,
@@ -25,10 +25,13 @@ const ProjectTypeSelector: FC<Props> = ({ form }) => {
       name='type'
       render={({ field }) => (
         <FormItem>
-          <Select {...field}>
-            <SelectTrigger>
-              <SelectValue placeholder="Project type" />
-            </SelectTrigger>
+          <FormLabel className='pl-4'>Project type</FormLabel>
+          <Select onValueChange={field.onChange} defaultValue={field.value}>
+            <FormControl>
+              <SelectTrigger>
+                <SelectValue placeholder="Select a project type" />
+              </SelectTrigger>
+            </FormControl>
             <SelectContent>
               <SelectItem value="Web">Web</SelectItem>
               <SelectItem value="Mobile">Mobile</SelectItem>
