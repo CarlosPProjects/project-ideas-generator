@@ -8,7 +8,7 @@ interface Props {
 
 const Container: FC<Props> = ({ children, className }) => {
   return (
-    <section className={cn('w-full max-w-[1440px] mx-auto', className)}>
+    <section className={cn('w-full max-w-[1440px] mx-auto px-4 md:px-8', className)}>
       {children}
     </section>
   )
