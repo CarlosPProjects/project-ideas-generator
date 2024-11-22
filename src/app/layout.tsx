@@ -34,7 +34,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col min-h-screen sm:px-4 md:px-8">
+          <div className="flex flex-col min-h-screen sm:px-4">
             {children}
           </div>
         </ThemeProvider>
