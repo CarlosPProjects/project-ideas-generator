@@ -10,7 +10,7 @@ const Ideas = () => {
         <h1 className='text-3xl font-medium'>Think It, Code It</h1>
         <GeneratorForm />
       </div>
-      {/* <CardList /> */}
+      <CardList />
     </Container>
   )
 }

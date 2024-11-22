@@ -4,9 +4,6 @@ import { Inter } from 'next/font/google'
 import '@/styles/globals.css';
 import { ThemeProvider } from "@/components/theme-provider";
 
-import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
-
 export const metadata: Metadata = {
   title: "ChronoProject",
   description: "ChronoProject is a collection of tools to help you generate ideas for your next project.",
@@ -37,12 +34,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex flex-col min-h-screen">
-            <Header />
-            <main className="flex-1 flex justify-center">
-              {children}
-            </main>
-            {/* <Footer /> */}
+          <div className="flex flex-col min-h-screen sm:px-4 md:px-8">
+            {children}
           </div>
         </ThemeProvider>
       </body>

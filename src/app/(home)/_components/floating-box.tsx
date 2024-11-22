@@ -16,7 +16,7 @@ const FloatingBox: FC<Props> = ({ className, initialPosition }) => {
       animate={{ x: 0, transition: { duration: 0.3, delay: 0.8, type: "spring", stiffness: 100 } }}
       whileHover={{ rotate: 0, transition: { duration: 0.3 } }}
       transition={{ type: "spring", stiffness: 100 }}
-      className={cn("z-0 absolute size-40 rounded-3xl shadow-lg", className)} />
+      className={cn("z-0 absolute size-40 rounded-3xl shadow-lg dark:bg-opacity-50", className)} />
   )
 }
 
