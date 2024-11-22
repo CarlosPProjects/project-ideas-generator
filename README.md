@@ -135,3 +135,5 @@ Si quieres ir más allá desde el principio:
 #### **Generación de ideas**:
 
 - **IA básica**: OpenAI API para enriquecer las ideas o ajustarlas según contexto.
+
+![image](https://github.com/user-attachments/assets/956ad1de-df5c-46a5-9f2c-c67c5c68ba4d)
