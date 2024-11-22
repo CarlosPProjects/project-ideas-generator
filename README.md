@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### **1\. Entrada de parámetros del usuario**
 
-## Getting Started
+#### **1.1. Tipo de proyecto**
 
-First, run the development server:
+- **Opciones**:
+  - Web.
+  - Móvil.
+  - IoT.
+  - Inteligencia Artificial.
+  - Backend (APIs, CRONs).
+  - Fullstack.
+- **Interfaz**:
+  - Un dropdown o radio buttons para que el usuario seleccione.
+  - Posibilidad de elegir múltiples opciones.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### **1.2. Nivel de dificultad**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Opciones**:
+  - Básico: Pensado para principiantes o proyectos pequeños.
+  - Intermedio: Proyectos con más funcionalidades o integración con APIs.
+  - Avanzado: Requiere múltiples tecnologías y mayor conocimiento.
+- **Interfaz**:
+  - Slider o botones de selección.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+#### **1.3. Tiempo disponible**
 
-To learn more about Next.js, take a look at the following resources:
+- **Opciones**:
+  - < 1 semana.
+  - 1-2 semanas.
+  - 1 mes.
+  - Más de 1 mes.
+- **Interfaz**:
+  - Slider o rangos predefinidos con botones de selección.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### **1.4. Tecnologías específicas**
 
-## Deploy on Vercel
+- **Opciones**:
+  - Input donde el usuario escribe las tecnologías que quiere usar (e.g., React, Firebase, Python).
+  - Autocompletado con una lista de tecnologías populares.
+- **Interfaz**:
+  - Un campo de texto con etiquetas (tags) que se van añadiendo al escribir.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### **1.5. Tema del proyecto**
+
+- **Opciones**:
+  - Categorías predefinidas como:
+    - Educación.
+    - Entretenimiento.
+    - Productividad.
+    - E-commerce.
+    - Salud y fitness.
+    - Social media.
+  - Opción de escribir un tema personalizado.
+- **Interfaz**:
+  - Lista de checkboxes para seleccionar múltiples temas.
+
+---
+
+### **2\. Lógica para la generación de ideas**
+
+#### **2.1. Algoritmo básico**
+
+Crea una lógica que combine los parámetros seleccionados por el usuario para generar una descripción breve y coherente del proyecto. Por ejemplo:
+
+**Parámetros**:
+
+- Tipo de proyecto: Web.
+- Nivel de dificultad: Intermedio.
+- Tiempo disponible: 1-2 semanas.
+- Tecnologías: React, Node.js.
+- Tema: Educación.
+
+**Idea generada**: _"Crear una plataforma web de educación en línea que permita a los usuarios registrarse y acceder a cursos interactivos. El proyecto incluirá un sistema de autenticación básico, un panel de control para gestionar cursos y una API con Node.js para almacenar información de usuarios y progreso."_
+
+---
+
+#### **2.2. Plantillas de ideas**
+
+Define plantillas genéricas para cada categoría que se puedan rellenar dinámicamente con los parámetros del usuario. Ejemplo:
+
+- **Web (E-commerce)**: _"Crea una tienda en línea que permita a los usuarios explorar productos por categoría, agregar productos al carrito y realizar pagos. Utiliza [tecnología backend] para gestionar pedidos y [tecnología frontend] para una experiencia de usuario interactiva."_
+
+- **IA (Productividad)**: _"Desarrolla un asistente personal con IA que ayude a organizar tareas diarias, recordatorios y metas a largo plazo. Implementa un modelo [tecnología de IA] para personalizar recomendaciones."_
+
+---
+
+### **3\. Interfaz de usuario**
+
+#### **3.1. Formularios de entrada**
+
+- Diseño limpio y minimalista.
+- Campos divididos en secciones claras para cada parámetro.
+- Usa librerías como **Formik** o **React Hook Form** para la validación de formularios.
+
+#### **3.2. Resultados generados**
+
+- Muestra la idea generada en un panel o tarjeta.
+- Opción de:
+  - Guardar la idea en una lista.
+  - Exportar la idea como texto o JSON.
+  - Regenerar para obtener una nueva sugerencia.
+
+---
+
+### **4\. Extras para mejorar la funcionalidad**
+
+Si quieres ir más allá desde el principio:
+
+- **Historial de ideas**: Guarda las ideas generadas para que el usuario pueda consultarlas más tarde.
+- **Compartir ideas**: Permite compartirlas en redes sociales o exportarlas como PDF.
+- **Filtros avanzados**: Los usuarios pueden filtrar resultados generados por relevancia, dificultad o categoría.
+
+---
+
+### **5\. Tecnologías sugeridas para implementar**
+
+#### **Frontend**:
+
+- **Framework**: Next.js o React.
+- **Diseño**: TailwindCSS para velocidad y estilo.
+
+#### **Backend**:
+
+- **Framework**: Node.js con Express (si necesitas guardar ideas o tener plantillas dinámicas).
+- **Base de datos**: MongoDB o Supabase para guardar plantillas, historial y configuraciones.
+
+#### **Generación de ideas**:
+
+- **IA básica**: OpenAI API para enriquecer las ideas o ajustarlas según contexto.
