@@ -5,11 +5,8 @@ import CardList from './_components/card-list'
 
 const Ideas = () => {
   return (
-    <Container className='flex-1 flex flex-col'>
-      <div className='flex flex-col space-y-8 items-center py-10'>
-        <h1 className='text-3xl font-medium'>Think It, Code It</h1>
-        <GeneratorForm />
-      </div>
+    <Container className='flex-1 flex py-4'>
+      <GeneratorForm />
       <CardList />
     </Container>
   )
