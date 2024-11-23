@@ -15,6 +15,7 @@ import { formSchema } from '@/lib/zod/form-schema'
 import ProjectTypeSelector from './project-type-selector'
 import SubmitBtn from './submit-btn'
 import { State, generateIdeas } from '../actions'
+import DifficultyCheckbox from './difficulty-checkbox'
 
 
 const GeneratorForm = () => {
@@ -51,10 +52,8 @@ const GeneratorForm = () => {
           </CardHeader>
           <CardContent className='flex-1 pt-0'>
             <Separator className='mb-5' />
-            {/* Project Type Select */}
-            <div className='space-y-4'>
-              <ProjectTypeSelector form={form} formState={formState} />
-            </div>
+            <ProjectTypeSelector form={form} formState={formState} />
+            <DifficultyCheckbox form={form} formState={formState} />
           </CardContent>
           <CardFooter>
             <SubmitBtn />
