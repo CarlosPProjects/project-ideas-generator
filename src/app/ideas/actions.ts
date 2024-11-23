@@ -10,12 +10,14 @@ export type State = | {
   errors?: z.inferFlattenedErrors<typeof formSchema>['fieldErrors']
 } | null
 
-export const generateIdeas = async (prevState: State, data: FormData): Promise<State> => {
+export const generateIdeas = async (prevState: State, data: FormData): Promise<State> => {;
 
   const validationResult = formSchema.safeParse({
     type: data.get('type'),
     difficulty: data.get('difficulty')
   });
+
+  console.log(validationResult);
 
   if (!validationResult.success) {
     return {
@@ -24,7 +26,6 @@ export const generateIdeas = async (prevState: State, data: FormData): Promise<S
       errors: validationResult.error.flatten().fieldErrors
     };
   }
-  
 
   await setTimeout(1000);
 
