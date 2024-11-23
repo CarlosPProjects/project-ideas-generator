@@ -16,11 +16,11 @@ import SubmitBtn from './submit-btn'
 import ProjectTypeSelector from './project-type-selector'
 import DifficultyCheckbox from './difficulty-checkbox'
 import ProjectThemeSelector from './project-theme-selector'
-import { generateIdeas, State } from '@/actions/generator'
+import { processAndGenerateIdeas , State } from '@/actions/generator'
 
 const GeneratorForm = () => {
 
-  const [formState, formAction] = useActionState<State, FormData>(generateIdeas, null);
+  const [formState, formAction] = useActionState<State, FormData>(processAndGenerateIdeas , null);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
