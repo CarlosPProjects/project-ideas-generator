@@ -7,4 +7,7 @@ export const formSchema = z.object({
   difficulty: z.enum(["Easy", "Medium", "Hard"], {
     errorMap: () => ({ message: "Por favor selecciona una dificultad válida." })
   }),
+  tech: z.string({
+    errorMap: () => ({ message: "Por favor ingresa una tecnología válida." })
+  }).min(1).max(12)
 })

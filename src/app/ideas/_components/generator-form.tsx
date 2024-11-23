@@ -16,6 +16,7 @@ import ProjectTypeSelector from './project-type-selector'
 import SubmitBtn from './submit-btn'
 import { State, generateIdeas } from '../actions'
 import DifficultyCheckbox from './difficulty-checkbox'
+import InputTech from './input-tech'
 
 const GeneratorForm = () => {
 
@@ -23,6 +24,10 @@ const GeneratorForm = () => {
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      difficulty: "Easy",
+      tech: ""
+    }
   })
 
   useEffect(() => {
@@ -53,6 +58,7 @@ const GeneratorForm = () => {
             <Separator />
             <ProjectTypeSelector form={form} formState={formState} />
             <DifficultyCheckbox form={form} formState={formState} />
+            <InputTech form={form} formState={formState} />
           </CardContent>
           <CardFooter>
             <SubmitBtn />

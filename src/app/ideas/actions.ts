@@ -14,7 +14,8 @@ export const generateIdeas = async (prevState: State, data: FormData): Promise<S
 
   const validationResult = formSchema.safeParse({
     type: data.get('type'),
-    difficulty: data.get('difficulty')
+    difficulty: data.get('difficulty'),
+    tech: data.get('tech')
   });
 
   console.log(validationResult);
