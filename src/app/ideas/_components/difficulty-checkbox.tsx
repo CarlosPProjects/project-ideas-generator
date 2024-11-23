@@ -49,7 +49,11 @@ const DifficultyCheckbox: FC<Props> = ({ form, formState }) => {
               </FormItem>
             </RadioGroup>
           </FormControl>
-          <FormMessage />
+          {formState?.status === 'error' && formState.errors?.difficulty && (
+            <FormMessage>
+              {formState.errors.difficulty.join(', ')}
+            </FormMessage>
+          )}
         </FormItem>
       )}
     />

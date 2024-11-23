@@ -17,7 +17,6 @@ import SubmitBtn from './submit-btn'
 import { State, generateIdeas } from '../actions'
 import DifficultyCheckbox from './difficulty-checkbox'
 
-
 const GeneratorForm = () => {
 
   const [formState, formAction] = useActionState<State, FormData>(generateIdeas, null);
@@ -32,9 +31,9 @@ const GeneratorForm = () => {
     }
 
     if (formState.status === "success") {
-      toast.success(formState.message);
+      toast.success("Ideas generated successfully");
     } else {
-      toast.error(formState.message);
+      toast.error("Failed to generate ideas");
     }
   }, [formState]);
 

@@ -43,9 +43,9 @@ const ProjectTypeSelector: FC<Props> = ({ form, formState }) => {
               <SelectItem value="Fullstack">Fullstack</SelectItem>
             </SelectContent>
           </Select>
-          {formState?.status === 'error' && (
+          {formState?.status === 'error' && formState.errors?.type && (
             <FormMessage>
-              {formState.message}
+              {formState.errors.type.join(', ')}
             </FormMessage>
           )}
         </FormItem>
