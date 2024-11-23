@@ -1,5 +1,3 @@
-'use client'
-
 import { Button } from "@/components/ui/button"
 import { Loader2Icon, Sparkles } from "lucide-react"
 import { useFormStatus } from "react-dom"

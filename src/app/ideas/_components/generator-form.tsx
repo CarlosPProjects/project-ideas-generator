@@ -16,11 +16,19 @@ import SubmitBtn from './submit-btn'
 import ProjectTypeSelector from './project-type-selector'
 import DifficultyCheckbox from './difficulty-checkbox'
 import ProjectThemeSelector from './project-theme-selector'
-import { processAndGenerateIdeas , State } from '@/actions/generator'
+import { processAndGenerateIdeas, State } from '@/actions/generator'
+import { useIdeas } from '@/contexts/IdeasContext'
 
 const GeneratorForm = () => {
 
-  const [formState, formAction] = useActionState<State, FormData>(processAndGenerateIdeas , null);
+  const [formState, formAction] = useActionState<State, FormData>(processAndGenerateIdeas, null);
+
+  const ideasContext = useIdeas();
+  if (!ideasContext) {
+    throw new Error("useIdeas must be used within an IdeasProvider");
+  }
+
+  const { setIdeas } = ideasContext;
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -34,12 +42,11 @@ const GeneratorForm = () => {
       return;
     }
 
-    if (formState.status === "success") {
+    if (formState.status === "success" && formState.ideas) {
       toast.success("Ideas generated successfully");
-    } else {
-      toast.error("Failed to generate ideas");
+      setIdeas(formState.ideas);
     }
-  }, [formState]);
+  }, [setIdeas, formState]);
 
   return (
     <Card className='rounded-2xl'>

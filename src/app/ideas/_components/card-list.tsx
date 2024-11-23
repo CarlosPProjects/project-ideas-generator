@@ -1,14 +1,24 @@
+'use client'
+
+import { useIdeas } from "@/contexts/IdeasContext";
 import CardProject from "./card-project";
 
 const CardList = () => {
 
-  const cards = []
+  const ideasContext = useIdeas();
+  if (!ideasContext) {
+    throw new Error("useIdeas must be used within an IdeasProvider");
+  }
+
+  const { ideas } = ideasContext;
 
   return (
-    <div className="flex-1 flex justify-center items-center">
-      {cards && cards.length > 0 ? (
-        <div className='grid grid-cols-4'>
-          <CardProject />
+    <div className="flex-1 flex">
+      {ideas.projects && ideas.projects.length > 0 ? (
+        <div className='grid grid-cols-4 gap-4'>
+          {ideas.projects.map((project, index) => (
+            <CardProject key={index} project={project} />
+          ))}
         </div>
       ) : (
         <div className='text-center space-y-2'>

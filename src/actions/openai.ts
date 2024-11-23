@@ -10,7 +10,7 @@ const openai = new OpenAI();
 
 export const generateIdeas = async (data: ResponseData): Promise<Ideas> => {
   try {
-    const systemMessage = 'You will generate 10 ideas for a project based on the following criteria: project type, difficulty, and theme.';
+    const systemMessage = 'You will generate a maximun of 8 ideas for a project based on the following criteria: project type, difficulty, and theme.';
 
     const { type, difficulty, theme } = data;
 
