@@ -1,7 +1,5 @@
-'use client'
-
 import { Button } from "@/components/ui/button"
-import { Sparkles } from "lucide-react"
+import { Loader2Icon, Sparkles } from "lucide-react"
 import { useFormStatus } from "react-dom"
 
 const SubmitBtn = () => {
@@ -15,7 +13,7 @@ const SubmitBtn = () => {
       type='submit'
       disabled={pending}
     >
-      <Sparkles className='size-4' />
+      {pending ? <Loader2Icon className='size-4 animate-spin' /> : <Sparkles className='size-4' />}
       <span>Generate</span>
     </Button>
   )

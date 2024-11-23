@@ -19,7 +19,7 @@ interface Props {
   formState: State;
 }
 
-const ProjectTypeSelector: FC<Props> = ({ form }) => {
+const ProjectTypeSelector: FC<Props> = ({ form, formState }) => {
 
   return (
     <FormField
@@ -43,9 +43,11 @@ const ProjectTypeSelector: FC<Props> = ({ form }) => {
               <SelectItem value="Fullstack">Fullstack</SelectItem>
             </SelectContent>
           </Select>
-          <FormMessage>
-            {form.formState.errors.type?.message}
-          </FormMessage>
+          {formState?.status === 'error' && (
+            <FormMessage>
+              {formState.message}
+            </FormMessage>
+          )}
         </FormItem>
       )}
     />

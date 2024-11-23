@@ -2,30 +2,24 @@
 
 import { z } from 'zod'
 import { zodResolver } from "@hookform/resolvers/zod"
+
+import { useActionState, useEffect } from 'react'
 import { useForm } from "react-hook-form"
 
 import { Form } from '@/components/ui/form'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from "@/components/ui/separator"
+import { toast } from "sonner"
 
 import { formSchema } from '@/lib/zod/form-schema'
 import ProjectTypeSelector from './project-type-selector'
 import SubmitBtn from './submit-btn'
-
-import { useActionState, useEffect } from 'react'
 import { State, generateIdeas } from '../actions'
 
-const INITIAL_STATE: State = {
-  status: "error",
-  data: {
-    type: "",
-  },
-  message: "",
-}
 
 const GeneratorForm = () => {
 
-  const [formState, formAction] = useActionState<State, FormData>(generateIdeas, INITIAL_STATE);
+  const [formState, formAction] = useActionState<State, FormData>(generateIdeas, null);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -37,9 +31,9 @@ const GeneratorForm = () => {
     }
 
     if (formState.status === "success") {
-      alert(formState.message);
+      toast.success(formState.message);
     } else {
-      alert(formState.message);
+      toast.error(formState.message);
     }
   }, [formState]);
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
+import { Toaster } from "@/components/ui/sonner"
 
 import '@/styles/globals.css';
 import { ThemeProvider } from "@/components/theme-provider";
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="flex flex-col min-h-screen sm:px-4">
             {children}
           </div>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
