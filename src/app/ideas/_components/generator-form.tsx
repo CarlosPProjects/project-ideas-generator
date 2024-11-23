@@ -11,27 +11,37 @@ import { Separator } from "@/components/ui/separator"
 import { formSchema } from '@/lib/zod/form-schema'
 import ProjectTypeSelector from './project-type-selector'
 import SubmitBtn from './submit-btn'
-import { generateIdeas, State } from '@/app/actions/generator'
 
 import { useActionState, useEffect } from 'react'
+import { State, generateIdeas } from '../actions'
+
+const INITIAL_STATE: State = {
+  status: "error",
+  data: {
+    type: "",
+  },
+  message: "",
+}
 
 const GeneratorForm = () => {
 
-  const [state, formAction] = useActionState<State, FormData>(generateIdeas, null);
+  const [formState, formAction] = useActionState<State, FormData>(generateIdeas, INITIAL_STATE);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   })
 
   useEffect(() => {
-    if (!state) {
+    if (!formState) {
       return;
     }
-  
-    if (state.status === "success") {
-      alert(state.message);
+
+    if (formState.status === "success") {
+      alert(formState.message);
+    } else {
+      alert(formState.message);
     }
-  }, [state]);
+  }, [formState]);
 
   return (
     <Card className='rounded-2xl'>
@@ -49,7 +59,7 @@ const GeneratorForm = () => {
             <Separator className='mb-5' />
             {/* Project Type Select */}
             <div className='space-y-4'>
-              <ProjectTypeSelector form={form} />
+              <ProjectTypeSelector form={form} formState={formState} />
             </div>
           </CardContent>
           <CardFooter>

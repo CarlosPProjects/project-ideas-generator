@@ -12,9 +12,11 @@ import {
 } from "@/components/ui/select"
 
 import { formSchema } from '@/lib/zod/form-schema'
+import { State } from '../actions'
 
 interface Props {
   form: UseFormReturn<z.infer<typeof formSchema>>
+  formState: State;
 }
 
 const ProjectTypeSelector: FC<Props> = ({ form }) => {
@@ -41,7 +43,9 @@ const ProjectTypeSelector: FC<Props> = ({ form }) => {
               <SelectItem value="Fullstack">Fullstack</SelectItem>
             </SelectContent>
           </Select>
-          <FormMessage />
+          <FormMessage>
+            {form.formState.errors.type?.message}
+          </FormMessage>
         </FormItem>
       )}
     />
