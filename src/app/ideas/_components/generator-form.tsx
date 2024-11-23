@@ -49,8 +49,8 @@ const GeneratorForm = () => {
               Customize your ideas by filling out the form below.
             </CardDescription>
           </CardHeader>
-          <CardContent className='flex-1 pt-0'>
-            <Separator className='mb-5' />
+          <CardContent className='flex-1 pt-0 space-y-5'>
+            <Separator />
             <ProjectTypeSelector form={form} formState={formState} />
             <DifficultyCheckbox form={form} formState={formState} />
           </CardContent>

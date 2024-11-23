@@ -18,13 +18,15 @@ const DifficultyCheckbox: FC<Props> = ({ form, formState }) => {
       name="difficulty"
       render={({ field }) => (
         <FormItem className="space-y-3">
-          <FormLabel className='pl-4'>Difficulty</FormLabel>
+          <FormLabel>Difficulty</FormLabel>
           <FormControl>
             <RadioGroup
               {...field}
-              className="flex flex-col space-y-1"
+              onValueChange={field.onChange}
+              defaultValue={field.value}
+              className="flex flex-wrap gap-4"
             >
-              <FormItem className="flex items-center space-x-3 space-y-0">
+              <FormItem className="flex items-center space-x-2 space-y-0">
                 <FormControl>
                   <RadioGroupItem value="Easy" />
                 </FormControl>
@@ -32,7 +34,7 @@ const DifficultyCheckbox: FC<Props> = ({ form, formState }) => {
                   Easy
                 </FormLabel>
               </FormItem>
-              <FormItem className="flex items-center space-x-3 space-y-0">
+              <FormItem className="flex items-center space-x-2 space-y-0">
                 <FormControl>
                   <RadioGroupItem value="Medium" />
                 </FormControl>
@@ -40,7 +42,7 @@ const DifficultyCheckbox: FC<Props> = ({ form, formState }) => {
                   Medium
                 </FormLabel>
               </FormItem>
-              <FormItem className="flex items-center space-x-3 space-y-0">
+              <FormItem className="flex items-center space-x-2 space-y-0">
                 <FormControl>
                   <RadioGroupItem value="Hard" />
                 </FormControl>
