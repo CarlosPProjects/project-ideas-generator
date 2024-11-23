@@ -59,6 +59,7 @@ const GeneratorForm = () => {
             <DifficultyCheckbox form={form} formState={formState} />
             <ProjectThemeSelector form={form} formState={formState} />
           </CardContent>
+          <Separator className='mb-5' />
           <CardFooter>
             <SubmitBtn />
           </CardFooter>
