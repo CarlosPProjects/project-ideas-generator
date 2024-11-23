@@ -2,12 +2,12 @@ import { z } from "zod";
 
 export const formSchema = z.object({
   type: z.enum(["Web", "Mobile", "IoT", "AI", "Backend", "Fullstack"], {
-    errorMap: () => ({ message: "Por favor selecciona un tipo de proyecto válido." })
+    errorMap: () => ({ message: "Select a type of project." })
   }),
   difficulty: z.enum(["Easy", "Medium", "Hard"], {
-    errorMap: () => ({ message: "Por favor selecciona una dificultad válida." })
+    errorMap: () => ({ message: "Select a project difficulty." })
   }),
-  tech: z.string({
-    errorMap: () => ({ message: "Por favor ingresa una tecnología válida." })
-  }).min(1).max(12)
+  theme: z.enum(["Education", "Entertaiment", "Productivity", "E-commerce", "Health", "Other"], {
+    errorMap: () => ({ message: "Select a project theme." })
+  })
 })

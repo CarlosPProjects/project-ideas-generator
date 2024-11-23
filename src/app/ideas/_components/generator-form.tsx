@@ -12,11 +12,11 @@ import { Separator } from "@/components/ui/separator"
 import { toast } from "sonner"
 
 import { formSchema } from '@/lib/zod/form-schema'
-import ProjectTypeSelector from './project-type-selector'
-import SubmitBtn from './submit-btn'
 import { State, generateIdeas } from '../actions'
+import SubmitBtn from './submit-btn'
+import ProjectTypeSelector from './project-type-selector'
 import DifficultyCheckbox from './difficulty-checkbox'
-import InputTech from './input-tech'
+import ProjectThemeSelector from './project-theme-selector'
 
 const GeneratorForm = () => {
 
@@ -26,7 +26,6 @@ const GeneratorForm = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       difficulty: "Easy",
-      tech: ""
     }
   })
 
@@ -58,7 +57,7 @@ const GeneratorForm = () => {
             <Separator />
             <ProjectTypeSelector form={form} formState={formState} />
             <DifficultyCheckbox form={form} formState={formState} />
-            <InputTech form={form} formState={formState} />
+            <ProjectThemeSelector form={form} formState={formState} />
           </CardContent>
           <CardFooter>
             <SubmitBtn />
