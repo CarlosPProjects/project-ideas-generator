@@ -1,10 +1,10 @@
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { formSchema } from "@/lib/zod/form-schema"
-import { State } from "../actions";
 import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 import { FC } from "react";
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { State } from "@/actions/generator";
 
 interface Props {
   form: UseFormReturn<z.infer<typeof formSchema>>

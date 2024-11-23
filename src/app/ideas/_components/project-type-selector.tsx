@@ -12,7 +12,8 @@ import {
 } from "@/components/ui/select"
 
 import { formSchema } from '@/lib/zod/form-schema'
-import { State } from '../actions'
+import { State } from '@/actions/generator'
+
 
 interface Props {
   form: UseFormReturn<z.infer<typeof formSchema>>

@@ -1,0 +1,45 @@
+{
+  "name": "project_ideas",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "required": [
+      "projects"
+    ],
+    "properties": {
+      "projects": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "title",
+            "description",
+            "difficulty"
+          ],
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the project idea."
+            },
+            "difficulty": {
+              "enum": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "type": "string",
+              "description": "The difficulty level of the project."
+            },
+            "description": {
+              "type": "string",
+              "description": "A brief description of the project idea."
+            }
+          },
+          "additionalProperties": false
+        },
+        "description": "A list of project ideas."
+      }
+    },
+    "additionalProperties": false
+  }
+}

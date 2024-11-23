@@ -12,11 +12,11 @@ import { Separator } from "@/components/ui/separator"
 import { toast } from "sonner"
 
 import { formSchema } from '@/lib/zod/form-schema'
-import { State, generateIdeas } from '../actions'
 import SubmitBtn from './submit-btn'
 import ProjectTypeSelector from './project-type-selector'
 import DifficultyCheckbox from './difficulty-checkbox'
 import ProjectThemeSelector from './project-theme-selector'
+import { generateIdeas, State } from '@/actions/generator'
 
 const GeneratorForm = () => {
 
