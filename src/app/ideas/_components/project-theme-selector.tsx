@@ -28,7 +28,7 @@ const ProjectThemeSelector: FC<Props> = ({ form, formState }) => {
       name='theme'
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Project theme</FormLabel>
+          <FormLabel className="font-semibold">Project theme</FormLabel>
           <Select
             {...field}
             onValueChange={field.onChange}

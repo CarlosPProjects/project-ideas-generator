@@ -28,7 +28,7 @@ const ProjectTypeSelector: FC<Props> = ({ form, formState }) => {
       name='type'
       render={({ field }) => (
         <FormItem>
-          <FormLabel>Project type</FormLabel>
+          <FormLabel className="font-semibold">Project type</FormLabel>
           <Select
             {...field}
             onValueChange={field.onChange}

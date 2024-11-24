@@ -15,7 +15,8 @@ export type State = | {
 export interface ResponseData {
   type: string,
   difficulty: string,
-  theme: string
+  theme: string,
+  additionalInfo?: string
 }
 
 export const processAndGenerateIdeas  = async (prevState: State, data: FormData): Promise<State> => {
@@ -24,7 +25,8 @@ export const processAndGenerateIdeas  = async (prevState: State, data: FormData)
   const validationResult = formSchema.safeParse({
     type: data.get('type'),
     difficulty: data.get('difficulty'),
-    theme: data.get('theme')
+    theme: data.get('theme'),
+    additionalInfo: data.get('additionalInfo')
   });
 
   if (!validationResult.success) {

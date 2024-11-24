@@ -20,6 +20,7 @@ import { processAndGenerateIdeas, State } from '@/actions/generator'
 import { useIdeas } from '@/contexts/IdeasContext'
 import { useRouter } from 'next/navigation'
 import { ArrowLeft } from 'lucide-react'
+import AditionalInfoTextarea from './aditional-info-textarea'
 
 const GeneratorForm = () => {
 
@@ -74,6 +75,7 @@ const GeneratorForm = () => {
             <ProjectTypeSelector form={form} formState={formState} />
             <DifficultyCheckbox form={form} formState={formState} />
             <ProjectThemeSelector form={form} formState={formState} />
+            <AditionalInfoTextarea form={form} formState={formState} />
           </CardContent>
           <Separator className='mb-5' />
           <CardFooter>

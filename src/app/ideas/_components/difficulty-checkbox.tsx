@@ -18,7 +18,7 @@ const DifficultyCheckbox: FC<Props> = ({ form, formState }) => {
       name="difficulty"
       render={({ field }) => (
         <FormItem className="space-y-3">
-          <FormLabel>Difficulty</FormLabel>
+          <FormLabel className="font-semibold">Difficulty</FormLabel>
           <FormControl>
             <RadioGroup
               {...field}

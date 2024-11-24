@@ -12,7 +12,7 @@ export const generateIdeas = async (data: ResponseData): Promise<Ideas> => {
   try {
     const systemMessage = 'You will generate 8 ideas for a project based on the following criteria: project type, difficulty, and theme. Technologies suggested should be based on the project type and difficulty. The suggested techoologies will be at least 3. Examples technologies are: React, Angular, Python, Java, AWS, Astro, etc.';
 
-    const { type, difficulty, theme } = data;
+    const { type, difficulty, theme, additionalInfo } = data;
 
     const response = await openai.chat.completions.create({
       model: "gpt-4o",
@@ -28,6 +28,9 @@ export const generateIdeas = async (data: ResponseData): Promise<Ideas> => {
         },
         {
           role: "user", content: `The project should be based on the theme of ${theme}.`
+        },
+        {
+          role: "user", content: `Aditional information: ${additionalInfo}`
         }
       ],
       response_format: {
