@@ -7,7 +7,7 @@ import { IdeasProvider } from '@/contexts/IdeasContext'
 const Ideas = () => {
   return (
     <IdeasProvider>
-      <Container className='flex-1 flex py-4 gap-4'>
+      <Container className='flex-1 flex flex-col lg:flex-row py-4 gap-4 px-4 sm:px-0'>
         <GeneratorForm />
         <CardList />
       </Container>

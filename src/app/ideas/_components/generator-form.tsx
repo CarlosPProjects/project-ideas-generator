@@ -18,8 +18,12 @@ import DifficultyCheckbox from './difficulty-checkbox'
 import ProjectThemeSelector from './project-theme-selector'
 import { processAndGenerateIdeas, State } from '@/actions/generator'
 import { useIdeas } from '@/contexts/IdeasContext'
+import { useRouter } from 'next/navigation'
+import { ArrowLeft } from 'lucide-react'
 
 const GeneratorForm = () => {
+
+  const router = useRouter()
 
   const [formState, formAction] = useActionState<State, FormData>(processAndGenerateIdeas, null);
 
@@ -49,12 +53,17 @@ const GeneratorForm = () => {
   }, [setIdeas, formState]);
 
   return (
-    <Card className='rounded-2xl'>
+    <Card className='h-fit rounded-2xl'>
       <Form {...form}>
-        <form action={formAction} className="h-full flex flex-col">
+        <form action={formAction} className="flex flex-col">
           <CardHeader>
-            <CardTitle className='text-lg'>
-              Generator
+            <CardTitle className='flex text-lg'>
+              <div onClick={() => router.push('/')} className='flex items-center gap-2 cursor-pointer'>
+                <ArrowLeft className='size-4' strokeWidth={3} />
+                <span>
+                  ChronoProject
+                </span>
+              </div>
             </CardTitle>
             <CardDescription>
               Customize your ideas by filling out the form below.

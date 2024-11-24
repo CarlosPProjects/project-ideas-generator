@@ -15,15 +15,15 @@ const CardList = () => {
   return (
     <div className="flex-1 flex">
       {ideas.projects && ideas.projects.length > 0 ? (
-        <div className='grid grid-cols-4 gap-4'>
+        <div className='grid sm:grid-cols-2 xl:grid-cols-3 gap-4'>
           {ideas.projects.map((project, index) => (
             <CardProject key={index} project={project} />
           ))}
         </div>
       ) : (
         <div className='w-full flex flex-col justify-center text-center space-y-2'>
-          <h2 className='text-xl font-medium'>Not project ideas found</h2>
-          <p className=''>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <h2 className='text-xl font-medium'>Not project ideas were generated</h2>
+          <p className=''>Try generating some ideas for your next project by filling out the form.</p>
         </div>
       )}
     </div>

@@ -7,7 +7,6 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
 } from "@/components/ui/drawer"
 
 import { Project } from '@/types/ideas';
@@ -15,12 +14,14 @@ import { Badge } from '@/components/ui/badge';
 
 interface Props {
   project: Project
+  isOpen: boolean
+  onOpenChange: (open: boolean) => void
 }
 
-const ProjectDetails: FC<Props> = ({ project }) => {
+const ProjectDetails: FC<Props> = ({ project, isOpen, onOpenChange }) => {
+
   return (
-    <Drawer>
-      <DrawerTrigger>Open</DrawerTrigger>
+    <Drawer open={isOpen} onOpenChange={onOpenChange}>
       <DrawerContent className='rounded-t-2xl'>
         <div className='mx-auto max-w-4xl'>
           <DrawerHeader>
@@ -33,7 +34,7 @@ const ProjectDetails: FC<Props> = ({ project }) => {
             </p>
           </div>
           <DrawerFooter>
-            <div className='flex gap-2'>
+            <div className='flex gap-2 justify-center sm:justify-start'>
               {project.suggested_technologies.map((tech, index) => (
                 <Badge variant='outline' className='text-xs' key={index}>{tech.name}</Badge>
               ))}
@@ -42,8 +43,7 @@ const ProjectDetails: FC<Props> = ({ project }) => {
         </div>
       </DrawerContent>
     </Drawer>
-
-  )
+  );
 }
 
 export default ProjectDetails;
