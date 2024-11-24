@@ -13,8 +13,16 @@ const SubmitBtn = () => {
       type='submit'
       disabled={pending}
     >
-      {pending ? <Loader2Icon className='size-4 animate-spin' /> : <Sparkles className='size-4' />}
-      <span>Generate</span>
+      {pending ?
+        <>
+          <Loader2Icon className='size-4 animate-spin' />
+          <span>Generating...</span>
+        </> :
+        <>
+          <Sparkles className='size-4' />
+          <span>Generate</span>
+        </>
+      }
     </Button>
   )
 }

@@ -21,9 +21,9 @@ const CardList = () => {
           ))}
         </div>
       ) : (
-        <div className='w-full flex flex-col justify-center text-center space-y-2'>
-          <h2 className='text-xl font-medium'>Not project ideas were generated</h2>
-          <p className=''>Try generating some ideas for your next project by filling out the form.</p>
+        <div className='max-w-sm mx-auto flex flex-col justify-center text-center space-y-2'>
+          <h2 className='text-xl font-semibold'>Not project ideas</h2>
+          <p className='text-base'>Try generating some ideas for your next project by filling out the form.</p>
         </div>
       )}
     </div>
