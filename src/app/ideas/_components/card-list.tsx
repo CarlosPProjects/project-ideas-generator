@@ -21,7 +21,7 @@ const CardList = () => {
           ))}
         </div>
       ) : (
-        <div className='text-center space-y-2'>
+        <div className='w-full flex flex-col justify-center text-center space-y-2'>
           <h2 className='text-xl font-medium'>Not project ideas found</h2>
           <p className=''>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
         </div>

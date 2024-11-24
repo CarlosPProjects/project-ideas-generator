@@ -3,43 +3,66 @@
   "strict": true,
   "schema": {
     "type": "object",
-    "required": [
-      "projects"
-    ],
     "properties": {
       "projects": {
         "type": "array",
+        "description": "A list of project ideas.",
         "items": {
           "type": "object",
-          "required": [
-            "title",
-            "description",
-            "difficulty"
-          ],
           "properties": {
             "title": {
               "type": "string",
-              "description": "The title of the project idea."
+              "description": "The title of the project."
+            },
+            "short_description": {
+              "type": "string",
+              "description": "A brief overview of the project."
+            },
+            "description": {
+              "type": "string",
+              "description": "A detailed description of the project."
             },
             "difficulty": {
+              "type": "string",
+              "description": "The difficulty level of the project.",
               "enum": [
                 "easy",
                 "medium",
                 "hard"
-              ],
-              "type": "string",
-              "description": "The difficulty level of the project."
+              ]
             },
-            "description": {
-              "type": "string",
-              "description": "A brief description of the project idea."
+            "suggested_technologies": {
+              "type": "array",
+              "description": "A list of suggested technologies to use for the project.",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The short name of the technology."
+                  }
+                },
+                "required": [
+                  "name"
+                ],
+                "additionalProperties": false
+              }
             }
           },
+          "required": [
+            "title",
+            "short_description",
+            "description",
+            "difficulty",
+            "suggested_technologies"
+          ],
           "additionalProperties": false
-        },
-        "description": "A list of project ideas."
+        }
       }
     },
+    "required": [
+      "projects"
+    ],
     "additionalProperties": false
   }
 }

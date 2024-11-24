@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/card"
 import { Project } from "@/types/ideas"
 import { FC } from "react"
+import ProjectDetails from "./project-details"
 
 interface Props {
   project: Project
@@ -22,6 +23,7 @@ const CardProject: FC<Props> = ({ project }) => {
       <CardContent className="p-5">
         <p className="text-sm">{project.description}</p>
       </CardContent>
+      <ProjectDetails project={project} />
     </Card>
   )
 }

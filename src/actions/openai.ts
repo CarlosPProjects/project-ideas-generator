@@ -10,7 +10,7 @@ const openai = new OpenAI();
 
 export const generateIdeas = async (data: ResponseData): Promise<Ideas> => {
   try {
-    const systemMessage = 'You will generate a maximun of 8 ideas for a project based on the following criteria: project type, difficulty, and theme.';
+    const systemMessage = 'You will generate 8 ideas for a project based on the following criteria: project type, difficulty, and theme. Technologies suggested should be based on the project type and difficulty. The suggested techoologie name wont be more than 2 words. Examples technologies are: React, Node.js, Python, etc.';
 
     const { type, difficulty, theme } = data;
 
