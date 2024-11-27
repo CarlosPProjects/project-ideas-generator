@@ -62,7 +62,7 @@ const GeneratorForm = () => {
               <div onClick={() => router.push('/')} className='flex items-center gap-2 cursor-pointer'>
                 <ArrowLeft className='size-4' strokeWidth={3} />
                 <span>
-                  ChronoProject
+                  NextIdea
                 </span>
               </div>
             </CardTitle>

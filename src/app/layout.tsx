@@ -6,8 +6,8 @@ import '@/styles/globals.css';
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: "ChronoProject",
-  description: "ChronoProject is a collection of tools to help you generate ideas for your next project.",
+  title: "NextIdea",
+  description: "NextIdea is a collection of tools to help you generate ideas for your next project.",
 };
 
 export const inter = Inter({

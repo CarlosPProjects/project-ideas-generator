@@ -16,7 +16,7 @@ const Header = () => {
     <header className={`${!isHomePage && 'border-b border-border shadow'}`}>
       <Container className="flex justify-between items-center p-4">
         <Link href='/' className="font-semibold text-2xl">
-          ChronoProject
+          NextIdea
         </Link>
         <ModeToggle />
       </Container>
