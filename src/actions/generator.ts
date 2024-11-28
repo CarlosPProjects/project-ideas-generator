@@ -16,7 +16,7 @@ export interface ResponseData {
   type: string,
   difficulty: string,
   theme: string,
-  additionalInfo: string
+  additionalInfo?: string
 }
 
 export const processAndGenerateIdeas = async (prevState: State, data: FormData): Promise<State> => {
