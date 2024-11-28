@@ -15,7 +15,7 @@ const AditionalInfoTextarea: FC<Props> = ({ form, formState }) => {
   return (
     <FormField
       control={form.control}
-      name="aditionalInfo"
+      name="additionalInfo"
       render={({ field }) => (
         <FormItem>
           <FormLabel className="font-semibold">Aditional Information</FormLabel>
@@ -24,14 +24,15 @@ const AditionalInfoTextarea: FC<Props> = ({ form, formState }) => {
               placeholder="Tell us more about your project (optional)"
               className="resize-none"
               {...field}
+              defaultValue={field.value}
             />
           </FormControl>
           <FormDescription>
             This information will help us to generate better ideas for you.
           </FormDescription>
-          {formState?.status === 'error' && formState.errors?.aditionalInfo && (
+          {formState?.status === 'error' && formState.errors?.additionalInfo && (
             <FormMessage>
-              {formState.errors.aditionalInfo.join(', ')}
+              {formState.errors.additionalInfo.join(', ')}
             </FormMessage>
           )}
         </FormItem>

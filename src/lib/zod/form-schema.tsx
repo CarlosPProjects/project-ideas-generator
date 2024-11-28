@@ -10,7 +10,7 @@ export const formSchema = z.object({
   theme: z.enum(["Education", "Entertaiment", "Productivity", "E-commerce", "Health", "Other"], {
     errorMap: () => ({ message: "Select a project theme." })
   }),
-  aditionalInfo: z.string({
+  additionalInfo: z.string({
     errorMap: () => ({ message: "Insert at least 10 caracters." })
   }).max(200, {
     message: "The maximum number of caracters is 200."
