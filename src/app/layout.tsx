@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import { Toaster } from "@/components/ui/sonner"
@@ -10,14 +11,12 @@ export const metadata: Metadata = {
   description: "NextIdea is a collection of tools to help you generate ideas for your next project.",
 };
 
-export const inter = Inter({
+const inter = Inter({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
   style: 'normal',
   display: 'swap',
   subsets: ['latin-ext'],
 });
-
-import { ReactNode } from 'react';
 
 interface RootLayoutProps {
   children: ReactNode;
