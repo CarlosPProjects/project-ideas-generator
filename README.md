@@ -1,139 +1,83 @@
-### **1\. Entrada de parámetros del usuario**
+# Generador de Ideas de Proyectos
 
-#### **1.1. Tipo de proyecto**
-
-- **Opciones**:
-  - Web.
-  - Móvil.
-  - IoT.
-  - Inteligencia Artificial.
-  - Backend (APIs, CRONs).
-  - Fullstack.
-- **Interfaz**:
-  - Un dropdown o radio buttons para que el usuario seleccione.
-  - Posibilidad de elegir múltiples opciones.
+Este proyecto es una aplicación web que ayuda a los usuarios a generar ideas de proyectos personalizadas según parámetros específicos como el tipo de proyecto, nivel de dificultad, tecnologías deseadas y temas de interés. Utiliza tecnologías modernas y un modelo de IA para ofrecer resultados precisos y relevantes.
 
 ---
 
-#### **1.2. Nivel de dificultad**
+## **Funcionalidades Principales**
 
-- **Opciones**:
-  - Básico: Pensado para principiantes o proyectos pequeños.
-  - Intermedio: Proyectos con más funcionalidades o integración con APIs.
-  - Avanzado: Requiere múltiples tecnologías y mayor conocimiento.
-- **Interfaz**:
-  - Slider o botones de selección.
+### **1. Entrada de Parámetros del Usuario**
+Los usuarios pueden personalizar los siguientes parámetros para generar ideas:
 
----
+- **Tipo de proyecto**: Selección entre opciones como Web, Móvil, IoT, IA, Backend, Fullstack.
+- **Nivel de dificultad**: Básico, Intermedio o Avanzado.
+- **Tiempo disponible**: Rango definido desde menos de una semana hasta más de un mes.
+- **Tecnologías específicas**: Campo de texto con autocompletado para ingresar herramientas como React, Firebase, Python, etc.
+- **Tema del proyecto**: Selección de categorías como Educación, Entretenimiento, E-commerce, entre otros, o agregar un tema personalizado.
 
-#### **1.3. Tiempo disponible**
+### **2. Generación de Ideas**
+- **Lógica de Generación**: Un algoritmo combina los parámetros seleccionados para crear una descripción coherente y breve del proyecto.
+- **Plantillas Dinámicas**: Se rellenan automáticamente con los datos proporcionados para garantizar resultados precisos.
 
-- **Opciones**:
-  - < 1 semana.
-  - 1-2 semanas.
-  - 1 mes.
-  - Más de 1 mes.
-- **Interfaz**:
-  - Slider o rangos predefinidos con botones de selección.
+### **3. Interfaz de Usuario**
+- **Formulario de Entrada**: Campos organizados en secciones claras, validación mediante librerías como Formik o React Hook Form.
+- **Resultados Generados**: Se muestran en un panel con opciones para guardar, exportar o regenerar ideas.
 
----
-
-#### **1.4. Tecnologías específicas**
-
-- **Opciones**:
-  - Input donde el usuario escribe las tecnologías que quiere usar (e.g., React, Firebase, Python).
-  - Autocompletado con una lista de tecnologías populares.
-- **Interfaz**:
-  - Un campo de texto con etiquetas (tags) que se van añadiendo al escribir.
+### **4. Funcionalidades Extras**
+- **Historial de Ideas**: Guarda las ideas generadas para consultarlas más tarde.
+- **Compartir Ideas**: Opción de compartir en redes sociales o exportar en formato PDF.
+- **Filtros Avanzados**: Filtrar resultados por relevancia, dificultad o categoría.
 
 ---
 
-#### **1.5. Tema del proyecto**
+## **Tecnologías Utilizadas**
 
-- **Opciones**:
-  - Categorías predefinidas como:
-    - Educación.
-    - Entretenimiento.
-    - Productividad.
-    - E-commerce.
-    - Salud y fitness.
-    - Social media.
-  - Opción de escribir un tema personalizado.
-- **Interfaz**:
-  - Lista de checkboxes para seleccionar múltiples temas.
+### **Frontend**
+- **Next.js**: Framework para SSR y enrutamiento eficiente.
+- **TailwindCSS**: Framework de estilos para una interfaz moderna y responsiva.
+- **shadcn/ui**: Componentes estilizados para un diseño limpio y funcional.
+- **TypeScript**: Tipado estático para mejorar la calidad del código.
+
+### **Generación de Ideas**
+- **OpenAI API**: Modelo de inteligencia artificial para enriquecer las ideas generadas.
 
 ---
 
-### **2\. Lógica para la generación de ideas**
+## **Cómo Usar**
 
-#### **2.1. Algoritmo básico**
+1. **Clonar el Repositorio**
+   ```bash
+   git clone https://github.com/CarlosPProjects/project-ideas-generator.git
+   cd project-ideas-generator
+   ```
 
-Crea una lógica que combine los parámetros seleccionados por el usuario para generar una descripción breve y coherente del proyecto. Por ejemplo:
+2. **Instalar Dependencias**
+   ```bash
+   npm install --force
+   ```
 
-**Parámetros**:
+3. **Configurar Variables de Entorno**
+   Crea un archivo `.env.local` con la siguiente variable:
+   - `OPENAI_API_KEY`: Clave de la API de OpenAI.
 
-- Tipo de proyecto: Web.
-- Nivel de dificultad: Intermedio.
-- Tiempo disponible: 1-2 semanas.
-- Tecnologías: React, Node.js.
-- Tema: Educación.
+4. **Iniciar el Servidor**
+   ```bash
+   npm run dev
+   ```
 
-**Idea generada**: _"Crear una plataforma web de educación en línea que permita a los usuarios registrarse y acceder a cursos interactivos. El proyecto incluirá un sistema de autenticación básico, un panel de control para gestionar cursos y una API con Node.js para almacenar información de usuarios y progreso."_
-
----
-
-#### **2.2. Plantillas de ideas**
-
-Define plantillas genéricas para cada categoría que se puedan rellenar dinámicamente con los parámetros del usuario. Ejemplo:
-
-- **Web (E-commerce)**: _"Crea una tienda en línea que permita a los usuarios explorar productos por categoría, agregar productos al carrito y realizar pagos. Utiliza [tecnología backend] para gestionar pedidos y [tecnología frontend] para una experiencia de usuario interactiva."_
-
-- **IA (Productividad)**: _"Desarrolla un asistente personal con IA que ayude a organizar tareas diarias, recordatorios y metas a largo plazo. Implementa un modelo [tecnología de IA] para personalizar recomendaciones."_
+5. Accede a la aplicación en [http://localhost:3000](http://localhost:3000).
 
 ---
 
-### **3\. Interfaz de usuario**
+## **Contribución**
 
-#### **3.1. Formularios de entrada**
-
-- Diseño limpio y minimalista.
-- Campos divididos en secciones claras para cada parámetro.
-- Usa librerías como **Formik** o **React Hook Form** para la validación de formularios.
-
-#### **3.2. Resultados generados**
-
-- Muestra la idea generada en un panel o tarjeta.
-- Opción de:
-  - Guardar la idea en una lista.
-  - Exportar la idea como texto o JSON.
-  - Regenerar para obtener una nueva sugerencia.
+¡Las contribuciones son bienvenidas! Por favor, sigue los siguientes pasos:
+1. Haz un fork del repositorio.
+2. Crea una rama con tus cambios.
+3. Envía un pull request para revisión.
 
 ---
 
-### **4\. Extras para mejorar la funcionalidad**
-
-Si quieres ir más allá desde el principio:
-
-- **Historial de ideas**: Guarda las ideas generadas para que el usuario pueda consultarlas más tarde.
-- **Compartir ideas**: Permite compartirlas en redes sociales o exportarlas como PDF.
-- **Filtros avanzados**: Los usuarios pueden filtrar resultados generados por relevancia, dificultad o categoría.
-
----
-
-### **5\. Tecnologías sugeridas para implementar**
-
-#### **Frontend**:
-
-- **Framework**: Next.js o React.
-- **Diseño**: TailwindCSS para velocidad y estilo.
-
-#### **Backend**:
-
-- **Framework**: Node.js con Express (si necesitas guardar ideas o tener plantillas dinámicas).
-- **Base de datos**: MongoDB o Supabase para guardar plantillas, historial y configuraciones.
-
-#### **Generación de ideas**:
-
-- **IA básica**: OpenAI API para enriquecer las ideas o ajustarlas según contexto.
+## **Capturas de Pantalla**
 
 ![image](https://github.com/user-attachments/assets/956ad1de-df5c-46a5-9f2c-c67c5c68ba4d)
