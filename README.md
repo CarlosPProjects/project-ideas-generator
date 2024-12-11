@@ -78,6 +78,4 @@ Los usuarios pueden personalizar los siguientes parámetros para generar ideas:
 
 ---
 
-## **Capturas de Pantalla**
-
 ![image](https://github.com/user-attachments/assets/956ad1de-df5c-46a5-9f2c-c67c5c68ba4d)
