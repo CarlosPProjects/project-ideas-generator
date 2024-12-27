@@ -1,6 +1,6 @@
 # Generador de Ideas de Proyectos
 
-Este proyecto es una aplicación web que ayuda a los usuarios a generar ideas de proyectos personalizadas según parámetros específicos como el tipo de proyecto, nivel de dificultad, tecnologías deseadas y temas de interés. Utiliza tecnologías modernas y un modelo de IA para ofrecer resultados precisos y relevantes.
+Este proyecto es una aplicación web diseñada para ayudar a los usuarios a generar ideas de proyectos personalizadas según una variedad de parámetros como el tipo de proyecto, nivel de dificultad, tecnologías deseadas y temas de interés. Utiliza tecnologías modernas y un modelo de IA para ofrecer resultados únicos y relevantes.
 
 ---
 
@@ -9,11 +9,11 @@ Este proyecto es una aplicación web que ayuda a los usuarios a generar ideas de
 ### **1. Entrada de Parámetros del Usuario**
 Los usuarios pueden personalizar los siguientes parámetros para generar ideas:
 
-- **Tipo de proyecto**: Selección entre opciones como Web, Móvil, IoT, IA, Backend, Fullstack.
+- **Tipo de proyecto**: Opciones como Web, Móvil, IoT, IA, Backend, Fullstack.
 - **Nivel de dificultad**: Básico, Intermedio o Avanzado.
-- **Tiempo disponible**: Rango definido desde menos de una semana hasta más de un mes.
+- **Tiempo disponible**: Desde menos de una semana hasta más de un mes.
 - **Tecnologías específicas**: Campo de texto con autocompletado para ingresar herramientas como React, Firebase, Python, etc.
-- **Tema del proyecto**: Selección de categorías como Educación, Entretenimiento, E-commerce, entre otros, o agregar un tema personalizado.
+- **Tema del proyecto**: Selección de categorías como Educación, Entretenimiento, E-commerce, entre otros, o la posibilidad de agregar un tema personalizado.
 
 ### **2. Generación de Ideas**
 - **Lógica de Generación**: Un algoritmo combina los parámetros seleccionados para crear una descripción coherente y breve del proyecto.
@@ -21,25 +21,28 @@ Los usuarios pueden personalizar los siguientes parámetros para generar ideas:
 
 ### **3. Interfaz de Usuario**
 - **Formulario de Entrada**: Campos organizados en secciones claras, validación mediante librerías como Formik o React Hook Form.
-- **Resultados Generados**: Se muestran en un panel con opciones para guardar, exportar o regenerar ideas.
+- **Resultados Generados**: Ideas mostradas en un panel con opciones para guardar, exportar o regenerar.
 
 ### **4. Funcionalidades Extras**
-- **Historial de Ideas**: Guarda las ideas generadas para consultarlas más tarde.
-- **Compartir Ideas**: Opción de compartir en redes sociales o exportar en formato PDF.
+- **Historial de Ideas**: Almacena las ideas generadas para consultarlas posteriormente.
+- **Compartir Ideas**: Opcion de compartir en redes sociales o exportar en formato PDF.
 - **Filtros Avanzados**: Filtrar resultados por relevancia, dificultad o categoría.
+- **Exportación a Notion** (Implementación futura).
+- **Generación de Diagramas de Flujo**: Integración con Skalidraw para visualizar ideas de forma estructurada (Implementación futura).
 
 ---
 
 ## **Tecnologías Utilizadas**
 
 ### **Frontend**
-- **Next.js**: Framework para SSR y enrutamiento eficiente.
+- **Next.js 15**: Framework para SSR, server actions, y manejo eficiente del estado.
 - **TailwindCSS**: Framework de estilos para una interfaz moderna y responsiva.
 - **shadcn/ui**: Componentes estilizados para un diseño limpio y funcional.
 - **TypeScript**: Tipado estático para mejorar la calidad del código.
 
 ### **Generación de Ideas**
-- **OpenAI API**: Modelo de inteligencia artificial para enriquecer las ideas generadas.
+- **OpenAI API**: Modelo de inteligencia artificial configurado para generar ideas en formato JSON Schema.
+- **Zod**: Librería para validación y manejo robusto de datos en el servidor.
 
 ---
 
@@ -75,7 +78,3 @@ Los usuarios pueden personalizar los siguientes parámetros para generar ideas:
 1. Haz un fork del repositorio.
 2. Crea una rama con tus cambios.
 3. Envía un pull request para revisión.
-
----
-
-![image](https://github.com/user-attachments/assets/956ad1de-df5c-46a5-9f2c-c67c5c68ba4d)
