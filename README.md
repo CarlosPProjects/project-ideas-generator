@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/04dcd388-a49d-427b-b005-72c2503141b1)![image](https://github.com/user-attachments/assets/02b63330-1ce6-4417-8c5e-7d2deca1ea88)
+![image](https://github.com/user-attachments/assets/04dcd388-a49d-427b-b005-72c2503141b1)
 ## 👉 Tutorial - [Video de Youtube](https://www.youtube.com/watch?v=u2lGfcKYHTs)
 
 # Generador de Ideas de Proyectos
