@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/04dcd388-a49d-427b-b005-72c2503141b1)![image](https://github.com/user-attachments/assets/02b63330-1ce6-4417-8c5e-7d2deca1ea88)
+## 👉 Tutorial - [Video de Youtube](https://www.youtube.com/watch?v=u2lGfcKYHTs)
+
 # Generador de Ideas de Proyectos
 
 Este proyecto es una aplicación web diseñada para ayudar a los usuarios a generar ideas de proyectos personalizadas según una variedad de parámetros como el tipo de proyecto, nivel de dificultad, tecnologías deseadas y temas de interés. Utiliza tecnologías modernas y un modelo de IA para ofrecer resultados únicos y relevantes.
